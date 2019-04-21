@@ -15,7 +15,8 @@ def get_first_name_of_season_winner(data, season)
 def get_contestant_name(data, occupation)
   data.each do |season, array|
     array.each do |people|
-      if k == occupation
+      people.each do |k,v|
+      if v == occupation
         return people["name"]
       end
     end
