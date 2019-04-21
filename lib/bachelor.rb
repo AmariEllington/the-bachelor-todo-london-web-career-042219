@@ -1,10 +1,18 @@
 def get_first_name_of_season_winner(data, season)
-  data[season.to_sym].each do |into_array|
-   if into_array[:status] =="Winner"
-     return into_array[:name].split(" ")[0]
-   end
- end
+  season_number)
+  data.each do |season, array_of_contestant_objs|
+    if season.to_s == season_number
+      array_of_contestant_objs.each do |contestant_hash|        
+        if contestant_hash[:status] == "Winner"
+          return contestant_hash[:name].split(' ').first
+        end
+      end
+      return "No Winner"
+    end
+  end
 end
+
+get_first_name_of_season_winner(data_base, "season 10")
 
 def get_contestant_name(data, occupation)
   # code here
