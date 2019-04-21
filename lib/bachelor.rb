@@ -8,7 +8,7 @@ def get_first_name_of_season_winner(data, season)
   winner
 end
 
-get_first_name_of_season_winner(data_base, "season 10")
+get_first_name_of_season_winner(data, "season 10")
 
 
 
