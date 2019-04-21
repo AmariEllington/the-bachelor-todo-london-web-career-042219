@@ -2,7 +2,7 @@ def get_first_name_of_season_winner(data, season)
   winner = nil
   data[season.to_sym].each do |contestant|
   if contestant[:status] == "Winner"
-    winner = contestant[:name].split(" ").first
+    winner = contestant[:name].split(" ")[0]
     end
   end
   winner
